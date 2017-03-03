@@ -7,7 +7,7 @@
 Description:
 -------------
 This is a financial calculator written in java for use in Command Prompt(CMD). It garners some formulae for calculations used in the financial world and taught at lancaster University's ACF100 Course.
-The MIT License applies to all files provided in the repo.
+The MIT License applies to all files provided in this repo.(See license file for more info)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 

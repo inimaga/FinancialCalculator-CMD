@@ -1,4 +1,4 @@
-# FinancialCalculator-CMD : A Financial Calculator that runs in Command prompt
+# FinancialCalculator : A Financial Calculator
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 ~~~~ Financial Calculator ~~~~
@@ -6,7 +6,7 @@
 
 Description:
 -------------
-This is a financial calculator written in java for use in Command Prompt(CMD). It garners some formulae for calculations used in the financial world and taught at lancaster University's ACF100 Course.
+This is a financial calculator written in java for use in Command Prompt(CMD) or through a Graphical User Interface(GUI). It garners some formulae for calculations used in the financial world and taught at lancaster University's ACF100 Course.
 Software entirely written and maintained by Issa Nimaga.
 The MIT License applies to all files provided in this repo.(See license file for more info)
 
@@ -41,7 +41,7 @@ Instructions:
 -------------------------
 As the file was written in java, you need to have installed java for this to work.
 	First download the files to a directory,
-	then in CMD navigate to the directory and run the FinancialCalculator class file.
+	then in CMD navigate to the directory and run the FinancialCalculator or the GUI class file.
 	Done! An easy to follow menu should help you calculate what you need.
 
 

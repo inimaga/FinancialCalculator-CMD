@@ -20,6 +20,7 @@ public class GUI implements ActionListener
 	ImageIcon TVMintro = new ImageIcon("Resources/TVM(intro).png");
 	
 	SCalculator standardCalculator = new SCalculator();
+	TVMscreen tvmCalculator = new TVMscreen();
 	
 	public GUI()
 	{
@@ -40,7 +41,7 @@ public class GUI implements ActionListener
 		mainScreen.add(tvm);
 		
 		window.setTitle("Financial Calculator by Issa Nimaga");
-		window.setSize(1100,450);
+		window.setSize(900,450);
 		window.setContentPane(mainScreen);
 		window.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,6 +62,10 @@ public class GUI implements ActionListener
 		if (event.getSource() == standard)
 		{
 			standardCalculator.show();
+		}
+		if (event.getSource() == tvm)
+		{
+			tvmCalculator.show();
 		}
 	}
 	

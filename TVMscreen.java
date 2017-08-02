@@ -24,7 +24,8 @@ public class TVMscreen implements ActionListener
 	ImageIcon Ac = new ImageIcon("Resources/Ac.png");	//Ac is short for annuity calculations
 	ImageIcon ratesIcon = new ImageIcon("Resources/rates.png");
 	
-	SCalculator standardCalculator = new SCalculator();
+	scfCalculations scf = new scfCalculations();
+	annuityCalculations aC = new annuityCalculations();
 	
 	public TVMscreen()
 	{
@@ -80,10 +81,11 @@ public class TVMscreen implements ActionListener
 	{
 		if (event.getSource() == singleCashFlow)
 		{
+			scf.show();
 		}
 		else if (event.getSource() == annuity)
 		{
-			
+			aC.show();
 		}
 		else if (event.getSource() == rates)
 		{

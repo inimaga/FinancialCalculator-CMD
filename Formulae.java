@@ -22,28 +22,50 @@ public class Formulae {
 	double H = 0;
 	
     
-    void calculatePV (){
+    double calculatePV (double futureValue, double rate, double T){
         
+		FV = futureValue;
+		Rate = rate/100;
+		Time = T;
+		
         R = Math.pow((float)(1 + Rate), (int)Time);
         PV = FV/R;
+		
+		return PV;
     }
     
-    void calculateFV(){
+    double calculateFV(double presentValue, double rate, double T){
         
+		PV = presentValue;
+		Rate = rate/100;
+		Time = T;
+		
         R = Math.pow((float)(1 + Rate), (int)Time);
         FV = PV * R;
         
+		return FV;
     }
     
-    void calculateTime(){
+    double calculateTime(double presentValue, double futureValue, double rate){
         
+		PV = presentValue;
+		FV = futureValue;
+		Rate = rate/100;
+		
         Time = (Math.log(FV/PV) / Math.log(1 + Rate));
         
+		return Time;
     }
     
-    void calculateRate(){
+    double calculateRate(double presentValue, double futureValue, double T){
         
+		PV = presentValue;
+		FV = futureValue;
+		Time = T;
+		
         Rate = (Math.pow((float)(FV/PV),(float)(1/Time)) - 1) * 100;
+		
+		return Rate;
     }
     
     void showValues(){
@@ -53,20 +75,37 @@ public class Formulae {
         System.out.println("The Rate used is: " + Rate);
     }
     // The addition of other features began here
-	void calculatePVA(){
+	double calculatePVA(double cashFlow, double rRate, double T){
+		Rate = rRate/100;
+		Time = T;
+		C = cashFlow;
 		
 		R =  Math.pow((float)(1 + Rate), (int)Time);
 		PVA = (C/Rate)* (1 - (1/R));
+		
+		return PVA;
 	}
 	
-	void calculateFVA(){
+	double calculateFVA(double cashFlow, double rRate, double T){
+		Rate = rRate/100;
+		Time = T;
+		C = cashFlow;
+		
 		R = Math.pow((float)(1 + Rate), (int)Time);
 		FVA = C * ((R - 1)/Rate);
+		
+		return FVA;
 	}
 	
-	void calculateC(){
+	double calculateC(double presentValueAnnuity, double rRate, double T){
+		Rate = rRate/100;
+		Time = T;
+		PVA = presentValueAnnuity;
+		
 		R =  Math.pow((float)(1 + Rate), (int)Time);
 		C = (PVA * Rate) / (1 - (1/R));
+		
+		return C;
 	}
 	
 	void calculateAT(){  				 //Means calculate annuity time

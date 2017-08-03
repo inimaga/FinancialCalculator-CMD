@@ -203,7 +203,7 @@ public class scfCalculations implements ActionListener
 				timeCalculation();
 			}
 			
-			System.out.println("Calculate button pressed, Answer is : " + answer);
+			//System.out.println("Calculate button pressed, Answer is : " + answer);
 			
 		}
 	}

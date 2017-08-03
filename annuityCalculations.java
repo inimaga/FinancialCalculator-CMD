@@ -182,7 +182,7 @@ public class annuityCalculations implements ActionListener
 				cashFlowCalculation();
 			}
 			
-			System.out.println("Calculate button pressed, Answer is : " + answer);
+			//System.out.println("Calculate button pressed, Answer is : " + answer);
 			
 		}
 	}

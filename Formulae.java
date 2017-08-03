@@ -4,22 +4,22 @@ public class Formulae {
     
     //As this is a program to calculate the value of money in different times, i have entered the involved variables below. "double" is used instead of "int" as it has a wider range.
     
-    double PV = 0;
-    double FV = 0;
-    double Time = 0;
-    double Rate = 0; //Tell the user to enter value as a percentage ?
-	double R = 0;
-	double C = 0; //Represents cashflow for annuity
-	double APR = 0;
-	double m = 0; //Represents period (Number of compounding period)
-	double NPV = 0; //Perhaps later include the feature to tell if the NPV is positive or negative
-	double PVA = 0;
-	double FVA = 0;
-	double EAR = 0;
-	double E = 0;
-	double F = 0;
-	double G = 0;
-	double H = 0;
+    private double PV = 0;
+    private double FV = 0;
+    private double Time = 0;
+    private double Rate = 0; //Tell the user to enter value as a percentage ?
+	private double R = 0;
+	private double C = 0; //Represents cashflow for annuity
+	private double APR = 0;
+	private double m = 0; //Represents period (Number of compounding period)
+	private double NPV = 0; //Perhaps later include the feature to tell if the NPV is positive or negative
+	private double PVA = 0;
+	private double FVA = 0;
+	private double EAR = 0;
+	private double E = 0;
+	private double F = 0;
+	private double G = 0;
+	private double H = 0;
 	
     
     double calculatePV (double futureValue, double rate, double T){
@@ -120,18 +120,28 @@ public class Formulae {
 		Internal Rate of returns;
 	}
 	*/
-	void calculateEAR(){
+	double calculateEAR(double aprReceived, double period){
+		APR = aprReceived/100;
+		m = period;
+		
 		EAR = (Math.pow((float)(1 + (APR/m)), (int)m) - 1);
 		APR = APR * 100;
 		EAR = EAR * 100;
+		
+		return EAR;
 	}
 	
-	void calculateAPR(){
+	double calculateAPR(double earReceived, double period){
+		EAR = earReceived/100;
+		m = period;
+		
 		F = (1/m);
 		E = Math.pow((double)(EAR + 1), (double)F);
 		APR = m * (E - 1);
 		APR = APR * 100;
 		EAR = EAR * 100;
+		
+		return APR;
 	}
 	
 	void showValuesB () {

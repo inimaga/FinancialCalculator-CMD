@@ -26,6 +26,7 @@ public class TVMscreen implements ActionListener
 	
 	scfCalculations scf = new scfCalculations();
 	annuityCalculations aC = new annuityCalculations();
+	rateCalculations aprAndEar = new rateCalculations();
 	
 	public TVMscreen()
 	{
@@ -89,7 +90,7 @@ public class TVMscreen implements ActionListener
 		}
 		else if (event.getSource() == rates)
 		{
-			
+			aprAndEar.show();
 		}	
 	}
 	

@@ -84,8 +84,8 @@ public class rateCalculations implements ActionListener
 		window.setTitle("Rate Calculations");
 		window.setSize(900,450);
 		window.setContentPane(mainScreen);
-		window.setVisible(true);
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//window.setVisible(true);
+		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		
 		valueSelected.addActionListener(this);

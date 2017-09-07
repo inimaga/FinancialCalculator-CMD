@@ -4,29 +4,29 @@ import java.awt.event.*;
 
 public class TVMscreen implements ActionListener
 {
-	JButton singleCashFlow = new JButton();
-	JButton annuity = new JButton();
-	JButton rates = new JButton();
-	JLabel TVMcalculator = new JLabel();
+	private JButton singleCashFlow = new JButton();
+	private JButton annuity = new JButton();
+	private JButton rates = new JButton();
+	private JLabel TVMcalculator = new JLabel();
 	
-	JPanel mainScreen = new JPanel();
-	JPanel top = new JPanel();
-	JPanel center = new JPanel();
+	private JPanel mainScreen = new JPanel();
+	private JPanel top = new JPanel();
+	private JPanel center = new JPanel();
 	
-	JFrame window = new JFrame();
+	private JFrame window = new JFrame();
 	
-	GridLayout layout0 = new GridLayout(1,3);
-	BorderLayout layout1 = new BorderLayout();
+	private GridLayout layout0 = new GridLayout(1,3);
+	private BorderLayout layout1 = new BorderLayout();
 	
 	//Addition of images for the graphics
-	ImageIcon TVMlabel = new ImageIcon("Resources/tVm.png");
-	ImageIcon sCf = new ImageIcon("Resources/sCf.png");	//sCf is short for single cash flow
-	ImageIcon Ac = new ImageIcon("Resources/Ac.png");	//Ac is short for annuity calculations
-	ImageIcon ratesIcon = new ImageIcon("Resources/rates.png");
+	private ImageIcon TVMlabel = new ImageIcon("Resources/tVm.png");
+	private ImageIcon sCf = new ImageIcon("Resources/sCf.png");	//sCf is short for single cash flow
+	private ImageIcon Ac = new ImageIcon("Resources/Ac.png");	//Ac is short for annuity calculations
+	private ImageIcon ratesIcon = new ImageIcon("Resources/rates.png");
 	
-	scfCalculations scf = new scfCalculations();
-	annuityCalculations aC = new annuityCalculations();
-	rateCalculations aprAndEar = new rateCalculations();
+	private scfCalculations scf = new scfCalculations();
+	private annuityCalculations aC = new annuityCalculations();
+	private rateCalculations aprAndEar = new rateCalculations();
 	
 	public TVMscreen()
 	{

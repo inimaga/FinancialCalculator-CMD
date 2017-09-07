@@ -22,7 +22,7 @@ public class Formulae {
 	private double H = 0;
 	
     
-    double calculatePV (double futureValue, double rate, double T){
+    public double calculatePV (double futureValue, double rate, double T){
         
 		FV = futureValue;
 		Rate = rate/100;
@@ -34,7 +34,7 @@ public class Formulae {
 		return PV;
     }
     
-    double calculateFV(double presentValue, double rate, double T){
+    public double calculateFV(double presentValue, double rate, double T){
         
 		PV = presentValue;
 		Rate = rate/100;
@@ -46,7 +46,7 @@ public class Formulae {
 		return FV;
     }
     
-    double calculateTime(double presentValue, double futureValue, double rate){
+    public double calculateTime(double presentValue, double futureValue, double rate){
         
 		PV = presentValue;
 		FV = futureValue;
@@ -57,7 +57,7 @@ public class Formulae {
 		return Time;
     }
     
-    double calculateRate(double presentValue, double futureValue, double T){
+    public double calculateRate(double presentValue, double futureValue, double T){
         
 		PV = presentValue;
 		FV = futureValue;
@@ -68,14 +68,14 @@ public class Formulae {
 		return Rate;
     }
     
-    void showValues(){
+    public void showValues(){
         System.out.println("The Present value is: " + PV);
         System.out.println("The Future value is: " + FV);
         System.out.println("The Time involved is: " + Time + " Years");
         System.out.println("The Rate used is: " + Rate);
     }
     // The addition of other features began here
-	double calculatePVA(double cashFlow, double rRate, double T){
+	public double calculatePVA(double cashFlow, double rRate, double T){
 		Rate = rRate/100;
 		Time = T;
 		C = cashFlow;
@@ -86,7 +86,7 @@ public class Formulae {
 		return PVA;
 	}
 	
-	double calculateFVA(double cashFlow, double rRate, double T){
+	public double calculateFVA(double cashFlow, double rRate, double T){
 		Rate = rRate/100;
 		Time = T;
 		C = cashFlow;
@@ -97,7 +97,7 @@ public class Formulae {
 		return FVA;
 	}
 	
-	double calculateC(double presentValueAnnuity, double rRate, double T){
+	public double calculateC(double presentValueAnnuity, double rRate, double T){
 		Rate = rRate/100;
 		Time = T;
 		PVA = presentValueAnnuity;
@@ -108,7 +108,7 @@ public class Formulae {
 		return C;
 	}
 	
-	void calculateAT(){  				 //Means calculate annuity time
+	public void calculateAT(){  				 //Means calculate annuity time
 		G = (1 - ((PVA * Rate)/C));
 		H = Math.pow((float)G , -1);
 		
@@ -120,7 +120,7 @@ public class Formulae {
 		Internal Rate of returns;
 	}
 	*/
-	double calculateEAR(double aprReceived, double period){
+	public double calculateEAR(double aprReceived, double period){
 		APR = aprReceived/100;
 		m = period;
 		
@@ -131,7 +131,7 @@ public class Formulae {
 		return EAR;
 	}
 	
-	double calculateAPR(double earReceived, double period){
+	public double calculateAPR(double earReceived, double period){
 		EAR = earReceived/100;
 		m = period;
 		
@@ -144,7 +144,7 @@ public class Formulae {
 		return APR;
 	}
 	
-	void showValuesB () {
+	public void showValuesB () {
 		System.out.println("The Present value of Annuity is: " + PVA);
         System.out.println("The Future value of Annuity is: " + FVA);
 		System.out.println("The CashFlow is: " + C);
@@ -152,15 +152,10 @@ public class Formulae {
         System.out.println("The Rate used is: " + Rate);
 	}
 	
-	void showValuesC () {
+	public void showValuesC () {
 		System.out.println("The APR is: " + APR);
         System.out.println("The EAR is: " + EAR);
         System.out.println("The number of compounding period is: " + m);
 	}
-	
-	
-	
-	
-	
 	
 }

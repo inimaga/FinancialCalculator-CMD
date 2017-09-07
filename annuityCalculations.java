@@ -7,39 +7,39 @@ public class annuityCalculations implements ActionListener
 {
 	
 	
-	JLabel calculating = new JLabel();
-	String[] values = {" Present Value of Annuity", " Future Value of Annuity", " Cash Flows"};
-	String[] entryLabel = {" Cashflow", " Rate (in %)", " Time"};
-	JComboBox valueSelected = new JComboBox(values);
+	private JLabel calculating = new JLabel();
+	private String[] values = {" Present Value of Annuity", " Future Value of Annuity", " Cash Flows"};
+	private String[] entryLabel = {" Cashflow", " Rate (in %)", " Time"};
+	private JComboBox valueSelected = new JComboBox(values);
 	
-	JLabel requiredLabel[] = new JLabel[3];
-	JTextField requiredField[] = new JTextField[4];
+	private JLabel requiredLabel[] = new JLabel[3];
+	private JTextField requiredField[] = new JTextField[4];
 	
-	JButton calculate = new JButton();
-	JLabel result = new JLabel("The Present Value is : 0");
+	private JButton calculate = new JButton();
+	private JLabel result = new JLabel("The Present Value is : 0");
 	
-	JPanel mainScreen = new JPanel();
-	JPanel top = new JPanel();
-	JPanel center = new JPanel();
-	JPanel bottom = new JPanel();
+	private JPanel mainScreen = new JPanel();
+	private JPanel top = new JPanel();
+	private JPanel center = new JPanel();
+	private JPanel bottom = new JPanel();
 	
-	JFrame window = new JFrame();
+	private JFrame window = new JFrame();
 	
-	BorderLayout layout0 = new BorderLayout();
-	GridLayout layout1 = new GridLayout(1,2);
-	GridLayout layout2 = new GridLayout(1,1);
-	GridLayout layout3 = new GridLayout(4,2);
+	private BorderLayout layout0 = new BorderLayout();
+	private GridLayout layout1 = new GridLayout(1,2);
+	private GridLayout layout2 = new GridLayout(1,1);
+	private GridLayout layout3 = new GridLayout(4,2);
 	
-	Font font0 = new Font("SansSerif", Font.BOLD, 25);
+	private Font font0 = new Font("SansSerif", Font.BOLD, 25);
 	
 	//Addition of images for the graphics
-	ImageIcon calculatingGraphic = new ImageIcon("Resources/calculating.png");
-	ImageIcon calculateGraphic = new ImageIcon("Resources/calculate.png");
+	private ImageIcon calculatingGraphic = new ImageIcon("Resources/calculating.png");
+	private ImageIcon calculateGraphic = new ImageIcon("Resources/calculate.png");
 	
 	
-	double answer = 0;
-	double[] valuesReceived = new double[3];
-	Formulae operations = new Formulae();
+	private double answer = 0;
+	private double[] valuesReceived = new double[3];
+	private Formulae operations = new Formulae();
 	
 	public annuityCalculations()
 	{

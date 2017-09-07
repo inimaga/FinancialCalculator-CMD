@@ -4,20 +4,20 @@ import java.awt.event.*;
 
 public class GUI implements ActionListener
 {
-	JButton standard = new JButton();
-	JButton tvm = new JButton();
-	JLabel financialCalculator = new JLabel();
+	private JButton standard = new JButton();
+	private JButton tvm = new JButton();
+	private JLabel financialCalculator = new JLabel();
 	
-	JPanel mainScreen = new JPanel();
+	private JPanel mainScreen = new JPanel();
 	
-	JFrame window = new JFrame();
+	private JFrame window = new JFrame();
 	
-	GridLayout layout0 = new GridLayout(3,1);
+	private GridLayout layout0 = new GridLayout(3,1);
 	
 	//Addition of images for the graphics
-	ImageIcon FC = new ImageIcon("Resources/FC.png");
-	ImageIcon SC = new ImageIcon("Resources/SC.png");
-	ImageIcon TVMintro = new ImageIcon("Resources/TVM(intro).png");
+	private ImageIcon FC = new ImageIcon("Resources/FC.png");
+	private ImageIcon SC = new ImageIcon("Resources/SC.png");
+	private ImageIcon TVMintro = new ImageIcon("Resources/TVM(intro).png");
 	
 	SCalculator standardCalculator = new SCalculator();
 	TVMscreen tvmCalculator = new TVMscreen();

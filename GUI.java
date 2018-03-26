@@ -51,6 +51,17 @@ public class GUI implements ActionListener
 		tvm.addActionListener(this);
 		
 		standardCalculator.goBack.addActionListener(this);
+		tvmCalculator.goBack.addActionListener(this);
+		
+		tvmCalculator.scf.goBack.addActionListener(this);
+		tvmCalculator.singleCashFlow.addActionListener(this);
+		
+		tvmCalculator.aC.goBack.addActionListener(this);
+		tvmCalculator.annuity.addActionListener(this);
+		
+		tvmCalculator.aprAndEar.goBack.addActionListener(this);
+		tvmCalculator.rates.addActionListener(this);
+		
 		
 	}
 	
@@ -68,14 +79,41 @@ public class GUI implements ActionListener
 			window.setContentPane(standardCalculator.main);
 			window.setVisible(true);
 		}
-		if (event.getSource() == tvm)
+		
+		if (event.getSource() == tvm || 
+			event.getSource() == tvmCalculator.scf.goBack || 
+			event.getSource() == tvmCalculator.aC.goBack || 
+			event.getSource() == tvmCalculator.aprAndEar.goBack )
 		{
-			tvmCalculator.show();
+			//tvmCalculator.show();
+			window.setContentPane(tvmCalculator.mainScreen);
+			window.setVisible(true);
 		}
 		
-		if (event.getSource() == standardCalculator.goBack)
+		if (event.getSource() == standardCalculator.goBack || event.getSource() == tvmCalculator.goBack)
 		{
 			window.setContentPane(mainScreen);
+		}
+		if (event.getSource() == tvmCalculator.singleCashFlow)
+		{
+			//standardCalculator.show();
+			
+			window.setContentPane(tvmCalculator.scf.mainScreen);
+			window.setVisible(true);
+		}
+		if (event.getSource() == tvmCalculator.annuity)
+		{
+			//standardCalculator.show();
+			
+			window.setContentPane(tvmCalculator.aC.mainScreen);
+			window.setVisible(true);
+		}
+		if (event.getSource() == tvmCalculator.rates)
+		{
+			//standardCalculator.show();
+			
+			window.setContentPane(tvmCalculator.aprAndEar.mainScreen);
+			window.setVisible(true);
 		}
 	}
 	

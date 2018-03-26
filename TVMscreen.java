@@ -1,15 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.Font;
 
-public class TVMscreen implements ActionListener
+public class TVMscreen //implements ActionListener
 {
-	private JButton singleCashFlow = new JButton();
-	private JButton annuity = new JButton();
-	private JButton rates = new JButton();
+	public JButton singleCashFlow = new JButton();
+	public JButton annuity = new JButton();
+	public JButton rates = new JButton();
 	private JLabel TVMcalculator = new JLabel();
 	
-	private JPanel mainScreen = new JPanel();
+	public JButton goBack = new JButton("Previous Screen");
+	
+	public JPanel mainScreen = new JPanel();
 	private JPanel top = new JPanel();
 	private JPanel center = new JPanel();
 	
@@ -24,9 +27,9 @@ public class TVMscreen implements ActionListener
 	private ImageIcon Ac = new ImageIcon("Resources/Ac.png");	//Ac is short for annuity calculations
 	private ImageIcon ratesIcon = new ImageIcon("Resources/rates.png");
 	
-	private scfCalculations scf = new scfCalculations();
-	private annuityCalculations aC = new annuityCalculations();
-	private rateCalculations aprAndEar = new rateCalculations();
+	public scfCalculations scf = new scfCalculations();
+	public annuityCalculations aC = new annuityCalculations();
+	public rateCalculations aprAndEar = new rateCalculations();
 	
 	public TVMscreen()
 	{
@@ -47,8 +50,12 @@ public class TVMscreen implements ActionListener
 		mainScreen.setLayout(layout1);
 		center.setLayout(layout0);
 		
+		Font font1 = new Font("SansSerif", Font.BOLD, 25);
+		goBack.setFont(font1);
+		
 		mainScreen.add("North", top);
 		mainScreen.add("Center", center);
+		mainScreen.add("South", goBack);
 		
 		top.add(TVMcalculator);
 		center.add(singleCashFlow);
@@ -62,9 +69,12 @@ public class TVMscreen implements ActionListener
 		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		
-		singleCashFlow.addActionListener(this);
-		annuity.addActionListener(this);
-		rates.addActionListener(this);
+		//singleCashFlow.addActionListener(this);
+		//annuity.addActionListener(this);
+		
+		//rates.addActionListener(this);
+		
+		//aprAndEar.goBack.addActionListener(this);
 		
 	}
 	
@@ -77,7 +87,8 @@ public class TVMscreen implements ActionListener
 	{
 		window.setVisible(true);
 	}
-	
+
+		/*	
 	public void actionPerformed(ActionEvent event)
 	{
 		if (event.getSource() == singleCashFlow)
@@ -88,10 +99,21 @@ public class TVMscreen implements ActionListener
 		{
 			aC.show();
 		}
+		
+		
 		else if (event.getSource() == rates)
 		{
-			aprAndEar.show();
-		}	
+			//aprAndEar.show();
+			window.setContentPane(aprAndEar.mainScreen);
+			window.setVisible(true);
+			
+		}
+		else if (event.getSource() == aprAndEar.goBack)
+		{
+			window.setContentPane(mainScreen);;
+		}
+	
 	}
+	*/	
 	
 }

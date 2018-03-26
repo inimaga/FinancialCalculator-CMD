@@ -121,7 +121,7 @@ public class SCalculator implements ActionListener
 		//Properties of the window frame begin here
 		window.setTitle("Nimaga's Calculator");
 		window.setSize(1120,465);
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setContentPane(main);
 		window.setVisible(false);
 		//Properties of the window frame end here

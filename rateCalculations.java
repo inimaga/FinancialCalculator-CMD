@@ -18,7 +18,7 @@ public class rateCalculations implements ActionListener
 	private JButton calculate = new JButton();
 	private JLabel result = new JLabel("The APR (in %) is : 0");
 	
-	private JPanel mainScreen = new JPanel();
+	public JPanel mainScreen = new JPanel();
 	private JPanel top = new JPanel();
 	private JPanel center = new JPanel();
 	private JPanel bottom = new JPanel();
@@ -29,6 +29,8 @@ public class rateCalculations implements ActionListener
 	private GridLayout layout1 = new GridLayout(1,2);
 	private GridLayout layout2 = new GridLayout(1,1);
 	private GridLayout layout3 = new GridLayout(3,2);
+	
+	public JButton goBack = new JButton("Previous Screen");
 	
 	private Font font0 = new Font("SansSerif", Font.BOLD, 25);
 	
@@ -46,6 +48,7 @@ public class rateCalculations implements ActionListener
 		calculating.setIcon(calculatingGraphic);
 		calculate.setIcon(calculateGraphic);
 		
+		goBack.setFont(font0);
 		valueSelected.setFont(font0);
 		result.setFont(font0);
 		result.setHorizontalAlignment(JLabel.CENTER);
@@ -62,6 +65,9 @@ public class rateCalculations implements ActionListener
 		
 		top.add(calculating);
 		top.add(valueSelected);
+		
+		
+		bottom.add(goBack);
 		
 		
 		for (int i = 0; i < entryLabel.length ; i++)
@@ -82,7 +88,7 @@ public class rateCalculations implements ActionListener
 		center.add(result);
 		
 		window.setTitle("Rate Calculations");
-		window.setSize(900,450);
+		window.setSize(1100,450);
 		window.setContentPane(mainScreen);
 		//window.setVisible(true);
 		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

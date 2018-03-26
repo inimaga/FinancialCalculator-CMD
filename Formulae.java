@@ -74,7 +74,7 @@ public class Formulae {
         System.out.println("The Time involved is: " + Time + " Years");
         System.out.println("The Rate used is: " + Rate);
     }
-    // The addition of other features began here
+	
 	public double calculatePVA(double cashFlow, double rRate, double T){
 		Rate = rRate/100;
 		Time = T;

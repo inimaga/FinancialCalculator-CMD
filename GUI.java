@@ -41,7 +41,7 @@ public class GUI implements ActionListener
 		mainScreen.add(tvm);
 		
 		window.setTitle("Financial Calculator by Issa Nimaga");
-		window.setSize(900,450);
+		window.setSize(1100,450);
 		window.setContentPane(mainScreen);
 		window.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,6 +49,8 @@ public class GUI implements ActionListener
 		
 		standard.addActionListener(this);
 		tvm.addActionListener(this);
+		
+		standardCalculator.goBack.addActionListener(this);
 		
 	}
 	
@@ -61,11 +63,19 @@ public class GUI implements ActionListener
 	{
 		if (event.getSource() == standard)
 		{
-			standardCalculator.show();
+			//standardCalculator.show();
+			
+			window.setContentPane(standardCalculator.main);
+			window.setVisible(true);
 		}
 		if (event.getSource() == tvm)
 		{
 			tvmCalculator.show();
+		}
+		
+		if (event.getSource() == standardCalculator.goBack)
+		{
+			window.setContentPane(mainScreen);
 		}
 	}
 	

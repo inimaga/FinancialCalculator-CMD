@@ -42,6 +42,10 @@ public class digits implements ActionListener
 		//Creation of Arithmetic Buttons end here
 		JButton CE = new JButton("CE");
 		
+		JButton empty = new JButton("_");
+		JButton empty2 = new JButton("_");
+		JButton empty3 = new JButton("_");
+		
 		
 		String userInput = "";
 		String userInput2 = "0";

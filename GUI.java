@@ -1,6 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.imageio.ImageIO;
+import java.net.URL;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class GUI implements ActionListener
 {
@@ -23,7 +27,17 @@ public class GUI implements ActionListener
 	TVMscreen tvmCalculator = new TVMscreen();
 	
 	public GUI()
-	{
+	{	
+		//Changing Calculator Icon	//Note that Jar file compilation does not work if the below code is active
+		try {
+		//URL resource = window.getClass().getResource("/Resources/Calculator-icon.png");
+        BufferedImage image = ImageIO.read(getClass().getResource("/Resources/Calculator-icon.png"));
+		//ImageIO.read(resource);
+		window.setIconImage(image);
+		} catch (IOException e) {
+            e.printStackTrace();
+        }
+		
 		financialCalculator.setIcon(FC);
 		standard.setIcon(SC);
 		tvm.setIcon(TVMintro);
@@ -33,7 +47,6 @@ public class GUI implements ActionListener
 		
 		//mainScreen.setBackground(Color.WHITE);
 		//standard.setOpaque(false);
-		
 		
 		mainScreen.setLayout(layout0);
 		mainScreen.add(financialCalculator);
@@ -62,7 +75,6 @@ public class GUI implements ActionListener
 		tvmCalculator.aprAndEar.goBack.addActionListener(this);
 		tvmCalculator.rates.addActionListener(this);
 		
-		
 	}
 	
 	public static void main(String[] args)
@@ -75,7 +87,6 @@ public class GUI implements ActionListener
 		if (event.getSource() == standard)
 		{
 			//standardCalculator.show();
-			
 			window.setContentPane(standardCalculator.main);
 			window.setVisible(true);
 		}

@@ -21,7 +21,7 @@ public class Formulae {
 	private double G = 0;
 	private double H = 0;
 	
-    
+	
     public double calculatePV (double futureValue, double rate, double T){
         
 		FV = futureValue;
@@ -115,7 +115,7 @@ public class Formulae {
 		Time = (Math.log(H) / Math.log(1 + Rate));
 	}
 	
-	/*
+	/*	To use later
 	void calculateIRR(){
 		Internal Rate of returns;
 	}

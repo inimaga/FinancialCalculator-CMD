@@ -1,9 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.Font;
 
-public class TVMscreen //implements ActionListener
+public class TVMscreen
 {
 	public JButton singleCashFlow = new JButton();
 	public JButton annuity = new JButton();
@@ -46,7 +45,6 @@ public class TVMscreen //implements ActionListener
 		center.setBackground(Color.WHITE);
 		//singleCashFlow.setOpaque(false);
 		
-		
 		mainScreen.setLayout(layout1);
 		center.setLayout(layout0);
 		
@@ -69,13 +67,6 @@ public class TVMscreen //implements ActionListener
 		//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		
-		//singleCashFlow.addActionListener(this);
-		//annuity.addActionListener(this);
-		
-		//rates.addActionListener(this);
-		
-		//aprAndEar.goBack.addActionListener(this);
-		
 	}
 	
 	public static void main(String[] args)
@@ -87,33 +78,5 @@ public class TVMscreen //implements ActionListener
 	{
 		window.setVisible(true);
 	}
-
-		/*	
-	public void actionPerformed(ActionEvent event)
-	{
-		if (event.getSource() == singleCashFlow)
-		{
-			scf.show();
-		}
-		else if (event.getSource() == annuity)
-		{
-			aC.show();
-		}
-		
-		
-		else if (event.getSource() == rates)
-		{
-			//aprAndEar.show();
-			window.setContentPane(aprAndEar.mainScreen);
-			window.setVisible(true);
-			
-		}
-		else if (event.getSource() == aprAndEar.goBack)
-		{
-			window.setContentPane(mainScreen);;
-		}
-	
-	}
-	*/	
 	
 }

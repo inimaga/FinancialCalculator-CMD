@@ -5,20 +5,11 @@ import java.awt.Font;
 
 public class digits implements ActionListener
 {
-	
-	//	calculator temp = new calculator();
-	
 		Font font2 = new Font("SansSerif", Font.BOLD, 45);
-
 		JTextField typeArea = new JTextField("0");
 		
-		
-		
 		//Creation of Digit Buttons begin here
-		JButton one = new JButton("1");	
-
-		//one.setFont(font2);		//Line that i want to ask question about.
-
+		JButton one = new JButton("1");
 		JButton two = new JButton("2");
 		JButton three = new JButton("3");
 		JButton four = new JButton("4");
@@ -38,14 +29,11 @@ public class digits implements ActionListener
 		JButton substract = new JButton("-");
 		JButton multiply = new JButton("x");
 		JButton divide = new JButton("/");
-		
 		//Creation of Arithmetic Buttons end here
+		
 		JButton CE = new JButton("CE");
 		
 		JButton empty = new JButton("_");
-		JButton empty2 = new JButton("_");
-		JButton empty3 = new JButton("_");
-		
 		
 		String userInput = "";
 		String userInput2 = "0";
@@ -53,77 +41,76 @@ public class digits implements ActionListener
 		
 		float a = 0;
 		float b = 0;
-		
 			
-	public void actionPerformed(ActionEvent zz)
+	public void actionPerformed(ActionEvent event)
 	{
-		if(zz.getSource() == one)
+		if(event.getSource() == one)
 		{
 			userInput = (userInput + "1");
 			userInput2 = (userInput2 + "1");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == two)
+		else if (event.getSource() == two)
 		{
 			userInput = (userInput + "2");
 			userInput2 = (userInput2 + "2");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == three)
+		else if (event.getSource() == three)
 		{
 			userInput = (userInput + "3");
 			userInput2 = (userInput2 + "3");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == four)
+		else if (event.getSource() == four)
 		{
 			userInput = (userInput + "4");
 			userInput2 = (userInput2 + "4");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == five)
+		else if (event.getSource() == five)
 		{
 			userInput = (userInput + "5");
 			userInput2 = (userInput2 + "5");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == six)
+		else if (event.getSource() == six)
 		{
 			userInput = (userInput + "6");
 			userInput2 = (userInput2 + "6");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == seven)
+		else if (event.getSource() == seven)
 		{
 			userInput = (userInput + "7");
 			userInput2 = (userInput2 + "7");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == eight)
+		else if (event.getSource() == eight)
 		{
 			userInput = (userInput + "8");
 			userInput2 = (userInput2 + "8");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == nine)
+		else if (event.getSource() == nine)
 		{
 			userInput = (userInput + "9");
 			userInput2 = (userInput2 + "9");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == zero)
+		else if (event.getSource() == zero)
 		{
 			userInput = (userInput + "0");
 			userInput2 = (userInput2 + "0");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == point)
+		else if (event.getSource() == point)
 		{
 			userInput = (userInput + ".");
 			userInput2 = (userInput2 + ".");
 			typeArea.setText(userInput);
 		}
-		else if (zz.getSource() == equal)
+		else if (event.getSource() == equal)
 		{
 			if (arithmetic == 1)
 			{
@@ -170,7 +157,7 @@ public class digits implements ActionListener
 				userInput2 = ("0");
 			}
 		}
-		else if (zz.getSource() == plus)
+		else if (event.getSource() == plus)
 		{
 			a = Float.parseFloat(userInput2);
 			b = b + a;
@@ -181,7 +168,7 @@ public class digits implements ActionListener
 			arithmetic = 1;
 			
 		}
-		else if (zz.getSource() == substract)
+		else if (event.getSource() == substract)
 		{
 			a = Float.parseFloat(userInput2);
 			b = b + a;
@@ -192,7 +179,7 @@ public class digits implements ActionListener
 			arithmetic = 2;
 			
 		}
-		else if (zz.getSource() == multiply)
+		else if (event.getSource() == multiply)
 		{
 			a = Float.parseFloat(userInput2);
 			b = b + a;
@@ -202,7 +189,7 @@ public class digits implements ActionListener
 			typeArea.setText(userInput);
 			arithmetic = 3;
 		}
-		else if (zz.getSource() == divide)
+		else if (event.getSource() == divide)
 		{
 			a = Float.parseFloat(userInput2);
 			b = b + a;
@@ -212,7 +199,7 @@ public class digits implements ActionListener
 			typeArea.setText(userInput);
 			arithmetic = 4;
 		}
-		else if (zz.getSource() == CE)
+		else if (event.getSource() == CE)
 		{
 			userInput = ("");
 			userInput2 = ("0");
@@ -222,9 +209,8 @@ public class digits implements ActionListener
 		}
 		else
 		{
-			System.out.println("How the hell did you get this to show?");
+			System.out.println("How the hell did you get this to show?");	//Easter egg?? LOL
 		}
-		
 		
 	}
 	

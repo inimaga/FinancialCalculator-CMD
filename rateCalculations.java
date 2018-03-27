@@ -6,7 +6,6 @@ import java.awt.Font;
 public class rateCalculations implements ActionListener
 {
 	
-	
 	private JLabel calculating = new JLabel();
 	private String[] values = {" Annual Percentage Rate (APR)", " Effective Annual Rate (EAR)"};
 	private String[] entryLabel = {" EAR (in %)", " Periods"};
@@ -65,8 +64,6 @@ public class rateCalculations implements ActionListener
 		
 		top.add(calculating);
 		top.add(valueSelected);
-		
-		
 		bottom.add(goBack);
 		
 		
@@ -96,7 +93,6 @@ public class rateCalculations implements ActionListener
 		
 		valueSelected.addActionListener(this);
 		calculate.addActionListener(this);
-		
 	}
 	
 	public static void main(String[] args)

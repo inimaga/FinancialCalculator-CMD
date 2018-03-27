@@ -6,7 +6,6 @@ import java.awt.Font;
 public class scfCalculations implements ActionListener
 {
 	
-	
 	private JLabel calculating = new JLabel();
 	private String[] values = {" Present Value", " Future Value", " Rate (in %)", " Time"};
 	private JComboBox valueSelected = new JComboBox(values);
@@ -35,7 +34,6 @@ public class scfCalculations implements ActionListener
 	//Addition of images for the graphics
 	private ImageIcon calculatingGraphic = new ImageIcon("Resources/calculating.png");
 	private ImageIcon calculateGraphic = new ImageIcon("Resources/calculate.png");
-	
 	
 	private double answer = 0;
 	private double[] valuesReceived = new double[3];
@@ -165,7 +163,6 @@ public class scfCalculations implements ActionListener
 			}
 			answer = operations.calculateTime(valuesReceived[0],valuesReceived[1],valuesReceived[2]);
 			result.setText("The Time period is : " + answer);
-	
 	}
 	
 	public void show()
@@ -181,7 +178,6 @@ public class scfCalculations implements ActionListener
 		{
 			selectedItem = valueSelected.getSelectedIndex();
 			initialise(selectedItem);
-			
 			
 			//System.out.println("wheel triggered, Selected item is at index " + a);
 		}
@@ -206,7 +202,6 @@ public class scfCalculations implements ActionListener
 			}
 			
 			//System.out.println("Calculate button pressed, Answer is : " + answer);
-			
 		}
 	}
 }

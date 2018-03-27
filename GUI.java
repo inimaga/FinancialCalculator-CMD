@@ -26,6 +26,9 @@ public class GUI implements ActionListener
 	SCalculator standardCalculator = new SCalculator();
 	TVMscreen tvmCalculator = new TVMscreen();
 	
+	/*
+	 * This class represents the Graphical User Interface through which other calculators are accessed by the User
+	 */
 	public GUI()
 	{	
 		//Changing Calculator Icon	//Note that Jar file compilation does not work if the below code is active
@@ -86,7 +89,6 @@ public class GUI implements ActionListener
 	{
 		if (event.getSource() == standard)
 		{
-			//standardCalculator.show();
 			window.setContentPane(standardCalculator.main);
 			window.setVisible(true);
 		}
@@ -96,7 +98,6 @@ public class GUI implements ActionListener
 			event.getSource() == tvmCalculator.aC.goBack || 
 			event.getSource() == tvmCalculator.aprAndEar.goBack )
 		{
-			//tvmCalculator.show();
 			window.setContentPane(tvmCalculator.mainScreen);
 			window.setVisible(true);
 		}
@@ -106,23 +107,17 @@ public class GUI implements ActionListener
 			window.setContentPane(mainScreen);
 		}
 		if (event.getSource() == tvmCalculator.singleCashFlow)
-		{
-			//standardCalculator.show();
-			
+		{			
 			window.setContentPane(tvmCalculator.scf.mainScreen);
 			window.setVisible(true);
 		}
 		if (event.getSource() == tvmCalculator.annuity)
 		{
-			//standardCalculator.show();
-			
 			window.setContentPane(tvmCalculator.aC.mainScreen);
 			window.setVisible(true);
 		}
 		if (event.getSource() == tvmCalculator.rates)
 		{
-			//standardCalculator.show();
-			
 			window.setContentPane(tvmCalculator.aprAndEar.mainScreen);
 			window.setVisible(true);
 		}
